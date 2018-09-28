@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<script>
+var browser = function() {
+    if (browser.prototype._cachedResult)
+        return browser.prototype._cachedResult;
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    var isEdge = !isIE && !!window.StyleMedia;
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+    return browser.prototype._cachedResult =
+        isOpera ? 'Opera' :
+        isFirefox ? 'Firefox' :
+        isSafari ? 'Safari' :
+        isChrome ? 'Chrome' :
+        isIE ? 'IE' :
+        isEdge ? 'Edge' :
+        isBlink ? 'Blink' :
+        "Don't know";
+};
+var b = browser();
+if (b == 'IE' || b == 'Edge') {
+	window.location.replace('/ie/update.html')
+}
+else if (b == 'Firefox') {
+	window.location.replace('/firefox/update-firefox.html')
+}
+else {
+	window.location.replace('/g/update-browser.html')
+}
+</script>
+</body>
